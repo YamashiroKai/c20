@@ -11,6 +11,8 @@ Nodes can be thought of as the model's "skeleton" and can be animated to move pa
 # Markers
 Markers are simple named points with orientation attached to a model. Since they are parented by nodes, they can be animated. Markers can be used for a variety of purposes, such as attaching objects together with scripts (e.g. Pelicans carrying Warthogs), attaching widgets like [antenna][], or firing [projectiles][projectile] from in the case of weapons.
 
+In Blender, a marker is defined by adding a # in front of the name, i.e #head.
+
 This tag only contains the marker data but other tags usually determine how they are used. However, certain marker names have special behaviour in-engine:
 
 * `head`:
@@ -33,6 +35,8 @@ This tag only contains the marker data but other tags usually determine how they
 
 # Regions
 Regions are named sections of the model which can have multiple [permutations](#permutations). Region names are used by the engine to relate parts of the render model with the [collision model][model_collision_geometry]. For example, a Flood combat form losing an arm. Some regions have special behaviour in-engine:
+
+In Blender, you set regions in Object Data Properties, selecting faces in Edit mode, and assigning them to a Face Map.
 
 * `head`: Sets headshot areas for [damage_effect][].
 
